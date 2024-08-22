@@ -1,0 +1,13 @@
+version: 2.0
+services:
+  app:
+    image: node:18-alpine
+    environment:
+      - NODE_ENV=development
+    steps:
+      - action: npm_install
+      - action: npm_test
+      - action: build_docker_image
+        arguments:
+          - --file Dockerfile
+          - --tag myapp:latest
