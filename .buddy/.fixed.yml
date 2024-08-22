@@ -15,3 +15,7 @@
     - "npm install"
     - "npm test"
     shell: "BASH"
+  - action: "Build Docker image"
+    type: "DOCKERFILE"
+    dockerfile_path: ""
+    do_not_prune_images: true
