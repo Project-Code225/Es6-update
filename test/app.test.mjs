@@ -11,7 +11,7 @@ describe('GET /', () => {
       .get('/')
       .end((err, res) => {
         expect(res).to.have.status(200);
-        expect(res.text).to.equal('Hello World!');
+        expect(res.text).to.equal('Hello World! This is a CI/CD test.');
         done();
       });
   });
